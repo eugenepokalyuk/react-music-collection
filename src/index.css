@@ -76,7 +76,7 @@ li {
 }
 
 .shape {
-    background: linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%);
+    background: linear-gradient(45deg, #e27fcb 0%, #5D6BF8 100%);
     animation: morph 8s ease-in-out infinite;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     height: 400px;
@@ -88,16 +88,16 @@ li {
 @keyframes morph {
     0% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        background: linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%);
+        /* background: linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%); */
     }
 
     50% {
         border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-        background: linear-gradient(45deg, #5D6BF8 0%, #e27fcb 100%);
+        /* background: linear-gradient(45deg, #e27fcb 0%, #5D6BF8 100%); */
     }
 
     100% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        background: linear-gradient(45deg, #e27fcb 0%, #5D6BF8 100%);
+        /* background: linear-gradient(45deg, #e27fcb 0%, #5D6BF8 100%); */
     }
 }
