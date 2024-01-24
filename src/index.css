@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;500;600;700;800&family=Tilt+Warp&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+    background: #070717;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Tilt Warp', sans-serif; */
+}
+
+p,
+li {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.font-tilt {
+    font-family: 'Tilt Warp', sans-serif;
+    font-weight: bolder;
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    font-size: 80px;
+    display: inline-block;
+    padding-left: 0%;
+    animation: marquee 60s linear infinite;
+}
+
+.marquee-content-reverse {
+    font-size: 80px;
+    display: inline-block;
+    padding-left: 0%;
+    animation: marquee-reverse 60s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+        /* transform: translateX(100%); */
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* transform: translateX(-100%); */
+    }
+}
+
+@keyframes marquee-reverse {
+    0% {
+        transform: translateX(-50%);
+        /* transform: translateX(100%); */
+    }
+
+    100% {
+        transform: translateX(0%);
+        /* transform: translateX(-100%); */
+    }
+}
+
+.marquee-content::after {
+    content: attr(data-text);
+}
+
+.shape {
+    background: linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%);
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 400px;
+    transition: all 1s ease-in-out;
+    width: 400px;
+    z-index: 5;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%);
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        background: linear-gradient(45deg, #5D6BF8 0%, #e27fcb 100%);
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        background: linear-gradient(45deg, #e27fcb 0%, #5D6BF8 100%);
+    }
+}
