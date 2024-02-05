@@ -1,8 +1,10 @@
+import { YMApi } from "ym-api";
 import About from '../About/About';
 import Collection from '../Collection/Collection';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import MarqueeBanner from '../MarqueeBanner/MarqueeBanner';
+const api = new YMApi();
 
 const AnimatedBanner = () => (
   <section className="p-4 flex justify-center items-center">
@@ -12,8 +14,7 @@ const AnimatedBanner = () => (
 
 
 const App = () => {
-  const playlists = [1006, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1017, 1022];
-
+  const playlists = [1006, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1017, 1022, 1024];
   return (
     <>
       <Header />

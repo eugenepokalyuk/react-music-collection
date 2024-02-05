@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;500;600;700;800&family=Tilt+Warp&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;500;600;700;800&family=Tilt+Warp&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;500;600;700;800&family=Tilt+Warp&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,6 +21,10 @@ h5 {
 p,
 li {
     font-family: 'Open Sans', sans-serif;
+}
+
+.font-ibm {
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .font-tilt {

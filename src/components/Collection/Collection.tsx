@@ -16,7 +16,7 @@ const PlaylistCard: FC<PlaylistCardProps> = ({ playlist }) => (
                 height="450"
                 src={`https://music.yandex.ru/iframe/playlist/mackspavlov/${playlist}`}
                 title={`Yandex Music Playlist ${playlist}`}>
-                Слушайте <a href={`https://music.yandex.ru/iframe/playlist/mackspavlov/${playlist}`}>Daily legends #1</a> —
+                {/* Слушайте <a href={`https://music.yandex.ru/iframe/playlist/mackspavlov/${playlist}`}>Daily legends #1</a> — */}
                 <a href='https://music.yandex.ru/users/mackspavlov'>Евгений Покалюк</a> на Яндекс Музыке
             </iframe>
         </div>

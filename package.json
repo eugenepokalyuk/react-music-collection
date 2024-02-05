@@ -13,10 +13,13 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "matter-js": "^0.19.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "ym-api": "^1.2.1"
   },
   "devDependencies": {
+    "@types/matter-js": "^0.19.6",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
