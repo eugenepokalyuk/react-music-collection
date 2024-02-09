@@ -1,10 +1,9 @@
-import { YMApi } from "ym-api";
+// import { YMApi } from "ym-api";
 import About from '../About/About';
 import Collection from '../Collection/Collection';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import MarqueeBanner from '../MarqueeBanner/MarqueeBanner';
-const api = new YMApi();
 
 const AnimatedBanner = () => (
   <section className="p-4 flex justify-center items-center">
