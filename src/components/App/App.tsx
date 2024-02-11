@@ -1,4 +1,3 @@
-// import { YMApi } from "ym-api";
 import About from '../About/About';
 import Collection from '../Collection/Collection';
 import Footer from '../Footer/Footer';
@@ -11,9 +10,8 @@ const AnimatedBanner = () => (
   </section>
 );
 
-
 const App = () => {
-  const playlists = [1006, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1017, 1022, 1024];
+  const playlists = [1006, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1017, 1022, 1024, 1026, 1027, 1028];
   return (
     <>
       <Header />
