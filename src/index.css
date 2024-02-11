@@ -92,16 +92,89 @@ li {
 @keyframes morph {
     0% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        /* background: linear-gradient(45deg, #88D5BF 0%, #5D6BF8 100%); */
     }
 
     50% {
         border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-        /* background: linear-gradient(45deg, #e27fcb 0%, #5D6BF8 100%); */
     }
 
     100% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        /* background: linear-gradient(45deg, #e27fcb 0%, #5D6BF8 100%); */
     }
+}
+
+.animated-banner {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.animated-banner-hidden {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+
+/* .shape-widget-visible {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+}
+
+.shape-widget-hidden {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+} */
+.shape-widget {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.shape-widget-visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.shape-widget-hidden {
+    transform: translateY(300px);
+    opacity: 0;
+}
+
+.shape-widget .message {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background-color: #f9f9f9;
+    padding: 8px 16px;
+    color: #333;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.shape-widget .message::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #f9f9f9 transparent transparent transparent;
+    filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.1));
+}
+
+.shape-widget .message.message-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-30px);
+}
+
+.shape-widget .message.message-hidden {
+    opacity: 0;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0%);
 }
