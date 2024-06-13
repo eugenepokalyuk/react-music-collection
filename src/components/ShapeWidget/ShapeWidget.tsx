@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
 interface ShapeWidgetProps {
     visible: boolean
@@ -7,11 +7,22 @@ interface ShapeWidgetProps {
 const ShapeWidget: FC<ShapeWidgetProps> = ({ visible }) => {
     const [showMessage, setShowMessage] = useState(false);
 
+    useEffect(() => {
+        let timeoutId: ReturnType<typeof setTimeout>;
+
+        if (showMessage) {
+            timeoutId = setTimeout(() => {
+                setShowMessage(false);
+            }, 3000);
+        }
+
+        return () => {
+            clearTimeout(timeoutId);
+        };
+    }, [showMessage]);
+
     const handleClick = () => {
         setShowMessage(true);
-        setTimeout(() => {
-            setShowMessage(false);
-        }, 3000);
     };
 
     return (
