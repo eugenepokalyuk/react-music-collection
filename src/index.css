@@ -1,5 +1,5 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;500;600;700;800&family=Tilt+Warp&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;500;600;700;800&family=Tilt+Warp&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,7 +15,6 @@ h3,
 h4,
 h5 {
     font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Tilt Warp', sans-serif; */
 }
 
 p,
@@ -54,24 +53,20 @@ li {
 @keyframes marquee {
     0% {
         transform: translateX(0%);
-        /* transform: translateX(100%); */
     }
 
     100% {
         transform: translateX(-50%);
-        /* transform: translateX(-100%); */
     }
 }
 
 @keyframes marquee-reverse {
     0% {
         transform: translateX(-50%);
-        /* transform: translateX(100%); */
     }
 
     100% {
         transform: translateX(0%);
-        /* transform: translateX(-100%); */
     }
 }
 
@@ -114,15 +109,6 @@ li {
     overflow: hidden;
 }
 
-/* .shape-widget-visible {
-    opacity: 1;
-    transition: opacity 300ms ease-in-out;
-}
-
-.shape-widget-hidden {
-    opacity: 0;
-    transition: opacity 300ms ease-in-out;
-} */
 .shape-widget {
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
