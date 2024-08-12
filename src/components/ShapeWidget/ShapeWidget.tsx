@@ -31,6 +31,7 @@ const ShapeWidget: FC<ShapeWidgetProps> = ({ visible }) => {
 
             <div className={`message ${showMessage ? "message-show" : "message-hidden"}`}>
                 <h1>Привет!</h1>
+                
                 <p>Я помощник Евгения, умею только здороваться!</p>
             </div>
         </div>
