@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+
 import About from '../About/About';
 import Collection from '../Collection/Collection';
 import Footer from '../Footer/Footer';
@@ -17,6 +18,7 @@ const App = () => {
   const playlists = [1006, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1017, 1022, 1024, 1026, 1027, 1028];
 
   const [bannerVisible, setBannerVisible] = useState<boolean>(true);
+
   const { ref, inView } = useInView({
     threshold: 0.1
   });
@@ -32,11 +34,19 @@ const App = () => {
   return (
     <>
       <Header />
+  
       <MarqueeBanner />
+      
       <Collection playlists={playlists} />
+      
       <AnimatedBanner />
+      
       <ShapeWidget visible={bannerVisible} />
-      <div ref={ref}><About /></div>
+      
+      <div ref={ref}>
+        <About />
+      </div>
+      
       <Footer />
     </>
   )
